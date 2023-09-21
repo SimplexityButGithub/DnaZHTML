@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My App</title>
+    <style>
+        body {
+            background-color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .glow {
+            animation: glowing 2s infinite;
+        }
+
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 5px #ff0000;
+            }
+
+            50% {
+                box-shadow: 0 0 20px #ff0000;
+            }
+
+            100% {
+                box-shadow: 0 0 5px #ff0000;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <img src="logo.png" alt="Logo" class="glow">
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; text-align: center; color: white; font-family: Segoe UI; font-size: 24px; margin-top: 20px;">
+        Quality, without a penny.
+    </div>
+
+    <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+        <a href="https://youtube.com" style="text-decoration: none;">
+            <button style="background: linear-gradient(to bottom, #ff0000, #cc0000); color: white; font-family: Segoe UI; font-size: 18px; padding: 10px 20px; margin-right: 10px;">Download</button>
+        </a>
+        <a href="https://x.com" style="text-decoration: none;">
+            <button style="background: linear-gradient(to bottom, #ff0000, #cc0000); color: white; font-family: Segoe UI; font-size: 18px; padding: 10px 20px; margin-right: 10px;">Alternate Download</button>
+        </a>
+        <a href="https://discord.com" style="text-decoration: none;">
+            <button style="background: linear-gradient(to bottom, #ff0000, #cc0000); color: white; font-family: Segoe UI; font-size: 18px; padding: 10px 20px;">Discord</button>
+        </a>
+    </div>
+
+    <script>
+        const logo = document.querySelector('.glow');
+        logo.addEventListener('mouseover', function () {
+            logo.classList.add('glow');
+        });
+        logo.addEventListener('mouseout', function () {
+            logo.classList.remove('glow');
+        });
+    </script>
+</body>
+
+</html>

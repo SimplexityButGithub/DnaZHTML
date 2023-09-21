@@ -2,15 +2,26 @@
 <html>
 
 <head>
-    <title>My App</title>
+    <title> Dna Z </title>
     <style>
         body {
             background-color: #333333;
             margin: 0;
             padding: 0;
+            font-family: Segoe UI;
         }
 
-        .glow {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
             animation: glowing 2s infinite;
         }
 
@@ -28,16 +39,30 @@
             }
         }
 
+        .title {
+            color: white;
+            font-size: 24px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
         .button {
             background: linear-gradient(to bottom, #ff0000, #cc0000);
             color: white;
-            font-family: Segoe UI;
             font-size: 18px;
             padding: 10px 20px;
-            margin-right: 10px;
+            margin: 0 10px;
             border: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            text-decoration: none;
         }
 
         .button:hover {
@@ -47,28 +72,20 @@
 </head>
 
 <body>
-    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-        <img src="logo.png" alt="Logo" class="glow">
-    </div>
-
-    <div style="display: flex; justify-content: center; align-items: center; text-align: center; color: white; font-family: Segoe UI; font-size: 24px; margin-top: 20px;">
-        Quality, without a penny.
-    </div>
-
-    <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-        <a href="https://youtube.com" style="text-decoration: none;">
-            <button class="button">Download</button>
-        </a>
-        <a href="https://x.com" style="text-decoration: none;">
-            <button class="button">Alternate Download</button>
-        </a>
-        <a href="https://discord.com" style="text-decoration: none;">
-            <button class="button">Discord</button>
-        </a>
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="title">
+            Quality, without a penny.
+        </div>
+        <div class="buttons">
+            <a href="https://youtube.com" class="button">Download</a>
+            <a href="https://x.com" class="button">Alternate Download</a>
+            <a href="https://discord.com" class="button">Discord</a>
+        </div>
     </div>
 
     <script>
-        const logo = document.querySelector('.glow');
+        const logo = document.querySelector('.logo');
         logo.addEventListener('mouseover', function () {
             logo.classList.add('glow');
         });

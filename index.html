@@ -69,6 +69,24 @@
         .button:hover {
             background: linear-gradient(to bottom, #cc0000, #990000);
         }
+
+        .message-box {
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .message-box .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .message-box .content {
+            font-size: 18px;
+        }
     </style>
 </head>
 
@@ -79,10 +97,15 @@
             Quality, without a penny.
         </div>
         <div class="buttons">
-            <a href="https://youtube.com" class="button">Download</a>
-            <a href="https://x.com" class="button">Alternate Download</a>
-            <a href="https://discord.com" class="button">Discord</a>
+            <a href="#" class="button" onclick="showMessageBox('Sorry', 'Sorry, dna z is currently not released.')">Download</a>
+            <a href="#" class="button" onclick="showMessageBox('Sorry', 'Sorry, dna z is currently not released.')">Alternate Download</a>
+            <a href="https://dsc.gg/dnastuff" class="button">Discord</a>
         </div>
+    </div>
+
+    <div id="message-box" class="message-box">
+        <div class="title"></div>
+        <div class="content"></div>
     </div>
 
     <script>
@@ -93,6 +116,13 @@
         logo.addEventListener('mouseout', function () {
             logo.classList.remove('glow');
         });
+
+        function showMessageBox(title, content) {
+            const messageBox = document.getElementById('message-box');
+            messageBox.querySelector('.title').textContent = title;
+            messageBox.querySelector('.content').textContent = content;
+            messageBox.style.display = 'block';
+        }
     </script>
 </body>
 

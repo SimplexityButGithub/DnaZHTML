@@ -27,6 +27,22 @@
                 box-shadow: 0 0 5px #ff0000;
             }
         }
+
+        .button {
+            background: linear-gradient(to bottom, #ff0000, #cc0000);
+            color: white;
+            font-family: Segoe UI;
+            font-size: 18px;
+            padding: 10px 20px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(to bottom, #cc0000, #990000);
+        }
     </style>
 </head>
 
@@ -41,13 +57,13 @@
 
     <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
         <a href="https://youtube.com" style="text-decoration: none;">
-            <button style="background: linear-gradient(to bottom, #ff0000, #cc0000); color: white; font-family: Segoe UI; font-size: 18px; padding: 10px 20px; margin-right: 10px;">Download</button>
+            <button class="button">Download</button>
         </a>
         <a href="https://x.com" style="text-decoration: none;">
-            <button style="background: linear-gradient(to bottom, #ff0000, #cc0000); color: white; font-family: Segoe UI; font-size: 18px; padding: 10px 20px; margin-right: 10px;">Alternate Download</button>
+            <button class="button">Alternate Download</button>
         </a>
         <a href="https://discord.com" style="text-decoration: none;">
-            <button style="background: linear-gradient(to bottom, #ff0000, #cc0000); color: white; font-family: Segoe UI; font-size: 18px; padding: 10px 20px;">Discord</button>
+            <button class="button">Discord</button>
         </a>
     </div>
 
